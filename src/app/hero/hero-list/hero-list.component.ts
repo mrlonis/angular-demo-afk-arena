@@ -9,7 +9,6 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./hero-list.component.scss']
 })
 export class HeroListComponent implements OnInit, OnDestroy {
-
   pageTitle = 'hero List';
   imageWidth = 50;
   imageMargin = 2;
