@@ -16,24 +16,24 @@
           "strict": true
         }
       },
-      "root": "",
-      "sourceRoot": "src",
+      "root": "projects/angular-demo-afk-arena",
+      "sourceRoot": "projects/angular-demo-afk-arena/src",
       "prefix": "afk",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/angular-demo-afk-arena",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "index": "projects/angular-demo-afk-arena/src/index.html",
+            "main": "projects/angular-demo-afk-arena/src/main.ts",
+            "polyfills": "projects/angular-demo-afk-arena/src/polyfills.ts",
+            "tsConfig": "projects/angular-demo-afk-arena/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/angular-demo-afk-arena/src/favicon.ico",
+              "projects/angular-demo-afk-arena/src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "projects/angular-demo-afk-arena/src/styles.scss"
             ],
             "scripts": [],
             "vendorChunk": true,
@@ -47,8 +47,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "projects/angular-demo-afk-arena/src/environments/environment.ts",
+                  "with": "projects/angular-demo-afk-arena/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -94,30 +94,26 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "main": "projects/angular-demo-afk-arena/src/test.ts",
+            "polyfills": "projects/angular-demo-afk-arena/src/polyfills.ts",
+            "tsConfig": "projects/angular-demo-afk-arena/src/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-demo-afk-arena/src/karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/angular-demo-afk-arena/src/favicon.ico",
+              "projects/angular-demo-afk-arena/src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "projects/angular-demo-afk-arena/src/styles.scss"
             ],
             "scripts": []
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/angular-demo-afk-arena/**/*.ts",
+              "projects/angular-demo-afk-arena/**/*.html"
             ]
           }
         },
